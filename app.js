@@ -11,6 +11,19 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Root - Daftar endpoint
+app.get('/', (req, res) => {
+  res.json({
+    message: '✅ Showroom API tersedia',
+    endpoints: {
+      'GET /api/chat-list': 'Ambil daftar chat',
+      'GET /api/room-info': 'Ambil info room',
+      'POST /api/send-message': 'Kirim pesan ke fanroom',
+      'POST /api/delete-chat': 'Hapus chat dari fanroom'
+    }
+  });
+});
+
 // GET Chat List
 app.get('/api/chat-list', async (req, res) => {
     try {
