@@ -75,15 +75,26 @@ app.get('/api/room-info', async (req, res) => {
 });
 
 // POST Send Message
+// POST Send Message
 app.post('/api/send-message', async (req, res) => {
   const { msg, csrf_token, sr_id, room_id } = req.body;
 
-  if (!msg || !csrf_token || !sr_id || !room_id) {
-    return res.status(400).json({ error: 'msg, csrf_token, sr_id, dan room_id wajib diisi' });
+  // Validasi lebih ketat
+  if (!msg || typeof msg !== 'string') {
+    return res.status(400).json({ error: 'Pesan (msg) harus berupa string dan wajib diisi' });
+  }
+  if (!csrf_token || typeof csrf_token !== 'string') {
+    return res.status(400).json({ error: 'CSRF token wajib diisi dan harus string' });
+  }
+  if (!sr_id || typeof sr_id !== 'string') {
+    return res.status(400).json({ error: 'SR ID wajib diisi dan harus string' });
+  }
+  if (!room_id || isNaN(room_id)) {
+    return res.status(400).json({ error: 'Room ID wajib diisi dan harus angka' });
   }
 
   const form = new FormData();
-  form.append('msg', msg);
+  form.append('msg', msg.trim());
   form.append('csrf_token', csrf_token);
   form.append('room_id', room_id);
 
@@ -94,15 +105,50 @@ app.post('/api/send-message', async (req, res) => {
       {
         headers: {
           ...form.getHeaders(),
-          ...postHeaders(sr_id, room_id)
+          ...postHeaders(sr_id, room_id),
+          'Content-Length': form.getLengthSync() // Tambahkan content length
         },
-        httpsAgent: new https.Agent({ rejectUnauthorized: false })
+        // Sebaiknya hindari rejectUnauthorized: false kecuali benar-benar diperlukan
+        httpsAgent: new https.Agent({ 
+          keepAlive: true,
+          maxSockets: 5
+        })
       }
     );
 
-    res.json({ success: true, result: response.data });
+    // Response lebih konsisten
+    if (response.data && response.data.ok === 1) {
+      return res.json({ 
+        success: true,
+        data: {
+          chat_id: response.data.talk_id,
+          timestamp: response.data.talk_time
+        }
+      });
+    } else {
+      return res.status(400).json({
+        success: false,
+        error: response.data?.error || 'Gagal mengirim pesan'
+      });
+    }
   } catch (error) {
-    res.status(500).json({ success: false, error: error.response?.data || error.message });
+    // Handle error lebih spesifik
+    if (error.response) {
+      return res.status(error.response.status).json({
+        success: false,
+        error: error.response.data?.error || error.response.statusText
+      });
+    } else if (error.request) {
+      return res.status(500).json({
+        success: false,
+        error: 'Tidak ada response dari server Showroom'
+      });
+    } else {
+      return res.status(500).json({
+        success: false,
+        error: error.message
+      });
+    }
   }
 });
 
