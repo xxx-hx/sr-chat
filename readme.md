@@ -131,7 +131,7 @@ Hapus chat dari fanroom.
 ### Local
 
 ```bash
-git clone https://github.com/Hxxn-hx/sr-chat.git
+git clone https://github.com/xxx-hx/sr-chat.git
 cd sr-chat
 npm install
 node serverless.js
