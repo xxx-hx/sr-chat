@@ -3,7 +3,7 @@
 API server berbasis Node.js/Express untuk berinteraksi dengan Showroom Fanroom.
 Disiapkan untuk dijalankan secara serverless di Vercel.
 
-A Node.js/Express-based API server to interact with Showroom Fanroom (live streaming platform).
+A Node.js/Express-based API server to interact with Showroom Fanroom.
 Ready to be deployed serverlessly on Vercel.
 
 ---
