@@ -37,10 +37,10 @@ Ambil daftar chat di sebuah room.
   {
     "chat_id": 12345678,
     "username": "******",
-    "date": ********,
+    "date": 111111,
     "message": "**********",
     "avatar": "https://static.showroom-live.com/image/avatar",
-    "user_id": ********
+    "user_id": 111111,
   }
 ]
 ```
@@ -50,8 +50,6 @@ Ambil daftar chat di sebuah room.
 ### `GET /api/room-info`
 
 Ambil informasi detail sebuah room.
-
-🔗 Example link: [`https://sr-chat.vercel.app/api/room-info?room_key=JKT48_OlineM`](https://sr-chat.vercel.app/api/room-info?room_key=JKT48_OlineM)
 
 **Query params:**
 
@@ -71,12 +69,12 @@ Ambil informasi detail sebuah room.
   "talk_name": "******",
   "room_image_file_type": "jpeg",
   "is_live": 0,
-  "room_updated_at": ******,
+  "room_updated_at": 111111,
   "room_name": "******",
   "talk_image_file_type": "",
-  "bcsvr_port": ******,
+  "bcsvr_port": 1111111,
   "online_time": "******",
-  "organizer_id": ******,
+  "organizer_id": 1111111,
   "can_delete": 0,
   "image_l": "******",
   "image_s": "******",
@@ -84,7 +82,7 @@ Ambil informasi detail sebuah room.
   "image_origin": "******",
   "cover_image_file_type": "jpeg",
   "online_status": 0,
-  "updated_at": ******,
+  "updated_at": 111111,
   "bcsvr_host": "******",
   "room_id": "******",
   "bcsvr_key": "******",
