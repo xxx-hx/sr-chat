@@ -8,8 +8,6 @@ Ready to be deployed serverlessly on Vercel.
 
 ---
 
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](LICENSE)
-
 ## 🚀 Features / Fitur
 
 ✅ Get chat list
@@ -27,8 +25,6 @@ Ready to be deployed serverlessly on Vercel.
 
 Ambil daftar chat di sebuah room.
 
-🔗 Example link: [`https://sr-chat.vercel.app/api/chat-list?room_id=510067&last_chat_id=0`](https://sr-chat.vercel.app/api/chat-list?room_id=510067&last_chat_id=0)
-
 **Query params:**
 
 * `room_id` (required)
@@ -39,12 +35,12 @@ Ambil daftar chat di sebuah room.
 ```json
 [
   {
-    "chat_id": 85145412,
-    "username": "Danish Asyahril",
-    "date": 1751281882,
-    "message": "kemarin oline live ga",
-    "avatar": "https://static.showroom-live.com/image/avatar/5.png?v=108",
-    "user_id": 9609735
+    "chat_id": 12345678,
+    "username": "******",
+    "date": ********,
+    "message": "**********",
+    "avatar": "https://static.showroom-live.com/image/avatar",
+    "user_id": ********
   }
 ]
 ```
@@ -65,34 +61,34 @@ Ambil informasi detail sebuah room.
 
 ```json
 {
-  "share_url": "https://www.showroom-live.com/room/fan_club?room_id=510067",
+  "share_url": "******",
   "has_talk_image": 0,
-  "community_description": "Name: Oline Manuel\r\nBirthday: 3 November 2007\r\nBlood type: B\r\nZodiac signs: Scorpio\r\n\r\nTwitter: M_OlineJKT48\r\nInstagram: jkt48.oline",
-  "room_url_key": "JKT48_OlineM",
+  "community_description": "******",
+  "room_url_key": "******",
   "room_status": 1,
-  "image_m": "https://static.showroom-live.com/image/room/cover/f27cc7e31f0e6551324bddb0cfe6981764e160fcef0731e53af327c34f721386_m.jpeg?v=1716896701",
+  "image_m": "******",
   "is_owner": 0,
-  "talk_name": "Oline / オリヌ（JKT48）",
+  "talk_name": "******",
   "room_image_file_type": "jpeg",
   "is_live": 0,
-  "room_updated_at": 1716896701,
-  "room_name": "Oline / オリヌ（JKT48）",
+  "room_updated_at": ******,
+  "room_name": "******",
   "talk_image_file_type": "",
-  "bcsvr_port": 8080,
-  "online_time": "OFFLINE",
-  "organizer_id": 2994,
+  "bcsvr_port": ******,
+  "online_time": "******",
+  "organizer_id": ******,
   "can_delete": 0,
-  "image_l": "https://static.showroom-live.com/image/room/cover/f27cc7e31f0e6551324bddb0cfe6981764e160fcef0731e53af327c34f721386_l.jpeg?v=1716896701",
-  "image_s": "https://static.showroom-live.com/image/room/cover/f27cc7e31f0e6551324bddb0cfe6981764e160fcef0731e53af327c34f721386_s.jpeg?v=1716896701",
+  "image_l": "******",
+  "image_s": "******",
   "is_fan": 0,
-  "image_origin": "https://static.showroom-live.com/image/room/cover/f27cc7e31f0e6551324bddb0cfe6981764e160fcef0731e53af327c34f721386_origin.jpeg?v=1716896701",
+  "image_origin": "******",
   "cover_image_file_type": "jpeg",
   "online_status": 0,
-  "updated_at": 1712207916,
-  "bcsvr_host": "online.showroom-live.com",
-  "room_id": "510067",
-  "bcsvr_key": "fan_com_510067",
-  "share_text": "Oline / オリヌ（JKT48）"
+  "updated_at": ******,
+  "bcsvr_host": "******",
+  "room_id": "******",
+  "bcsvr_key": "******",
+  "share_text": "******"
 }
 ```
 
