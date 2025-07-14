@@ -1,6 +1,6 @@
 # 📡 Showroom Fanroom API
 
-API server berbasis Node.js/Express untuk berinteraksi dengan Showroom Fanroom (live streaming platform).
+API server berbasis Node.js/Express untuk berinteraksi dengan Showroom Fanroom.
 Disiapkan untuk dijalankan secara serverless di Vercel.
 
 A Node.js/Express-based API server to interact with Showroom Fanroom (live streaming platform).
@@ -10,11 +10,11 @@ Ready to be deployed serverlessly on Vercel.
 
 ## 🚀 Features / Fitur
 
-✅ Get chat list \n
-✅ Get room info \n
-✅ Send message \n
-✅ Delete chat \n
-✅ CORS-enabled \n
+✅ Get chat list
+✅ Get room info
+✅ Send message
+✅ Delete chat
+✅ CORS-enabled
 ✅ Ready for Serverless (Vercel)
 
 ---
@@ -143,11 +143,7 @@ Akses di: `http://localhost:3000`
 
 ### Deploy to Vercel
 
-Sudah ada konfigurasi `vercel.json`, tinggal jalankan:
-
-```bash
-vercel deploy
-```
+Sudah ada konfigurasi `vercel.json`, tinggal upload ke Vercell
 
 ---
 
