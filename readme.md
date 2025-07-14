@@ -10,11 +10,11 @@ Ready to be deployed serverlessly on Vercel.
 
 ## 🚀 Features / Fitur
 
-✅ Get chat list
-✅ Get room info
-✅ Send message
-✅ Delete chat
-✅ CORS-enabled
+✅ Get chat list \n
+✅ Get room info \n
+✅ Send message \n
+✅ Delete chat \n
+✅ CORS-enabled \n
 ✅ Ready for Serverless (Vercel)
 
 ---
@@ -134,7 +134,7 @@ Hapus chat dari fanroom.
 git clone https://github.com/Hxxn-hx/sr-chat.git
 cd sr-chat
 npm install
-node app.js
+node serverless.js
 ```
 
 Akses di: `http://localhost:3000`
