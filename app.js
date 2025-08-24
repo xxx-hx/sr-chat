@@ -45,7 +45,8 @@ app.get('/api/chat-list', async (req, res) => {
       date: chat.ts,
       message: chat.s,
       avatar: chat.i,
-      user_id: chat.u
+      user_id: chat.u,
+      image: chat.m
     }));
 
     res.json(mappedChats);
